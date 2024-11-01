@@ -1,0 +1,33 @@
+.main-menu {
+  background-color: orange;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-menu li {
+  display: inline;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.main-menu a:hover,
+.main-menu a.active {
+  background-color: lightblue;
+  color: black;
+}

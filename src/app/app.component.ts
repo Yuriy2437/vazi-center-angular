@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  // imports: [CommonModule, RouterModule] // Добавьте здесь необходимые модули
+  imports: [CommonModule, RouterModule, MainMenuComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'vazi-center';
-}
+export class AppComponent {}

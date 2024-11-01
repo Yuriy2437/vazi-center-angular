@@ -1,0 +1,59 @@
+<div class="page-container">
+  <div class="left-section" style="--left-section-bg-color: #d331c3">
+    <p class="about-text">
+      The Vazi Center is a multi-functional developing cultural space in
+      Tbilisi. Here you can watch movies, hear lectures, attend cultural and
+      music events, and even get a consultation by a professional psychologist.
+      If you have children, we have a playroom carefully watched by an adult.
+      You are also welcome to enjoy a complementary cup of coffee or tea while
+      here.
+    </p>
+    <div class="button-container">
+      <!-- <button (click)="togglePhoto()" class="photo-button">
+        {{ showPhoto ? "Close Photo" : "Show Photo" }}
+      </button> -->
+    </div>
+  </div>
+  <div class="right-section">
+    <!-- <ng-container *ngIf="showPhoto"> -->
+    <!-- <ng-container></ng-container> -->
+    <!-- Здесь должен быть компонент PhotoGallery -->
+    <!-- <app-photo-gallery [photos]="photos"></app-photo-gallery> -->
+    <!-- </ng-container> -->
+    <!-- Здесь должен быть компонент QuestionSection -->
+    <!-- <app-question-section
+      apiEndpoint="/api/about/questions"
+      title="Questions about Vazi Center"
+      [isAdmin]="isAdminUser"
+    ></app-question-section> -->
+    <h2>About Us</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input
+        [(ngModel)]="newQuestion.name"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+      <input
+        [(ngModel)]="newQuestion.email"
+        name="email"
+        placeholder="Your Email"
+        required
+      />
+      <textarea
+        [(ngModel)]="newQuestion.question"
+        name="question"
+        placeholder="Your Question"
+        required
+      ></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <h3>Previous Questions:</h3>
+    <ul>
+      <li *ngFor="let q of questions">
+        <strong>{{ q.name }}</strong> ({{ q.email }}): {{ q.question }}
+      </li>
+    </ul>
+  </div>
+</div>
