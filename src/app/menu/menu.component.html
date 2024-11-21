@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="leftSection">
+    <h1 class="title">Menu</h1>
+    <ul class="menuList">
+      <li
+        *ngFor="let item of menuItems; let i = index"
+        class="menuItem"
+        [style.animation-delay]="i * 0.1 + 's'"
+        (click)="navigateTo(item.path)"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="rightSection">
+    <img
+      src="/images/page2.jpeg"
+      alt="Menu background"
+      class="backgroundImage"
+    />
+  </div>
+</div>

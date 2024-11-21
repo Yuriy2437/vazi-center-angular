@@ -1,0 +1,40 @@
+<h2 class="question-section-title">Questions about Vazi Center</h2>
+<form
+  [formGroup]="questionForm"
+  (ngSubmit)="onSubmit()"
+  class="ask-question-form"
+>
+  <div class="input-container">
+    <input
+      formControlName="name"
+      type="text"
+      placeholder="Name"
+      name="name"
+      maxlength="25"
+      class="name-input"
+      required
+    />
+    <input
+      formControlName="email"
+      type="email"
+      placeholder="Email"
+      name="email"
+      maxlength="25"
+      class="email-input"
+      required
+    />
+  </div>
+  <div>
+    <input
+      formControlName="question"
+      placeholder="Question"
+      name="question"
+      maxlength="150"
+      class="question-input"
+      required
+    />
+  </div>
+  <button type="submit" class="send-button" [disabled]="!questionForm.valid">
+    Send
+  </button>
+</form>

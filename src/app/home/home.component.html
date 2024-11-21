@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="backgroundImage"></div>
+  <div class="content">
+    <h1 class="title">Welcome to Vazi Center</h1>
+    <div class="buttonContainer">
+      <button (click)="showAdminLogin = !showAdminLogin" class="button">
+        Entrance for Admin
+      </button>
+      <button (click)="handleEntranceForAll()" class="button">
+        Entrance for all
+      </button>
+    </div>
+    <div *ngIf="showAdminLogin" class="loginForm">
+      <input type="text" [(ngModel)]="login" name="login" placeholder="Login" />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+      />
+      <button (click)="handleAdminLogin()" class="button">Enter</button>
+      <p *ngIf="errorMessage" class="errorMessage">{{ errorMessage }}</p>
+    </div>
+  </div>
+</div>

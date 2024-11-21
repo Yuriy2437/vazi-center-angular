@@ -1,0 +1,21 @@
+<h2>List of Questions</h2>
+<div class="questions-header">
+  <span>Name</span>
+  <span>Question</span>
+  <span>Action</span>
+  <span>Answer</span>
+</div>
+<div class="questions-list">
+  <div *ngFor="let question of questions$ | async" class="questions-content">
+    <p class="question-item">
+      <strong>{{ question.name }}</strong
+      >: {{ question.question }}
+      <button class="delete-button" (click)="deleteQuestion(question._id)">
+        Delete
+      </button>
+      <button class="answer-button" (click)="answerQuestion(question.email)">
+        Answer
+      </button>
+    </p>
+  </div>
+</div>

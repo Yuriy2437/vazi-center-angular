@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://vazi-center-angular.vercel.app",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

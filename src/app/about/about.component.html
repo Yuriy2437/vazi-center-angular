@@ -1,0 +1,33 @@
+<div class="page-container">
+  <div class="left-section" style="--left-section-bg-color: #d331c3">
+    <p class="about-text">
+      The Vazi Center is a multi-functional developing cultural space in
+      Tbilisi. Here you can watch movies, hear lectures, attend cultural and
+      music events, and even get a consultation by a professional psychologist.
+      If you have children, we have a playroom carefully watched by an adult.
+      You are also welcome to enjoy a complementary cup of coffee or tea while
+      here.
+    </p>
+    <div class="button-container">
+      <button (click)="togglePhoto()" class="photo-button show-photo">
+        Show Photo
+      </button>
+      <button
+        (click)="togglePhoto()"
+        class="photo-button close-photo"
+        [class.hidden]="!showPhoto"
+      >
+        Close Photo
+      </button>
+    </div>
+  </div>
+  <div class="right-section">
+    <app-photo-gallery *ngIf="showPhoto" [photos]="photos"></app-photo-gallery>
+    <div class="yellow-section">
+      <app-question-form></app-question-form>
+    </div>
+    <div class="turquoise-section">
+      <app-question-list [isAdmin]="isAdmin"></app-question-list>
+    </div>
+  </div>
+</div>

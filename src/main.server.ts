@@ -1,3 +1,6 @@
+import './polyfills';
+import 'zone.js/node';
+// import 'zone.js/dist/zone-node';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { config } from './app/app.config.server';

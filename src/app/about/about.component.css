@@ -1,0 +1,113 @@
+.main-menu {
+  background-color: orange;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-menu li {
+  display: inline;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.main-menu a:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.page-container {
+  display: flex;
+  height: calc(100vh - 50px); /* Учитываем высоту меню */
+}
+
+.left-section {
+  display: flex;
+  flex: 1;
+  padding: 0.7rem 2rem 2rem 2rem;
+  color: white;
+  flex-direction: column;
+  background-color: var(--left-section-bg-color);
+}
+
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.about-text {
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.photo-button {
+  padding: 0.5rem 1rem;
+  background-color: #df0b0b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.photo-button:hover {
+  background-color: #ff3333;
+}
+
+.show-photo {
+  align-self: flex-start;
+}
+
+.close-photo {
+  align-self: flex-end;
+}
+
+.hidden {
+  display: none;
+}
+
+/* .question-text {
+  white-space: normal;
+} */
+
+.yellow-section {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  background-color: yellow;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.turquoise-section {
+  background-color: turquoise;
+  padding: 20px;
+  padding-top: 0;
+  height: 55%;
+  overflow-y: auto;
+}

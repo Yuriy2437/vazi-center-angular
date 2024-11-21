@@ -1,0 +1,11 @@
+<div class="photo-overlay">
+  <button class="arrow-button left-arrow" (click)="handlePrevPhoto()">
+    &lt;
+  </button>
+  <div class="photo-container">
+    <img [src]="photos[currentPhotoIndex]" alt="Gallery Photo" />
+  </div>
+  <button class="arrow-button right-arrow" (click)="handleNextPhoto()">
+    &gt;
+  </button>
+</div>
